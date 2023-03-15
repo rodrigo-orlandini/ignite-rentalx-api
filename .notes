@@ -1,0 +1,43 @@
+    - DOCKERFILE:
+
+FROM - The docker image that you wanna use
+WORKDIR - Path that docker will use as root directory
+
+COPY package.json ./ - Copying package.json content inside WORKDIR
+RUN npm install - Get dependencies from package.json
+COPY . . - Copy everything inside WORKDIR (Excluding files and folder in .dockerignore)
+
+EXPOSE 3333 - Selecting the port to run app
+
+CMD ["npm", "run", "dev"] - Running 'npm run dev' in terminal
+
+
+
+    - DOCKER COMMANDS:
+
+docker build -t <img_name> <local_root_directory> (docker build -t rentalx .)
+- Create the docker image
+
+docker ps
+- List all containers
+
+docker run -p <local_port>:<docker_port> rentalx (docker run -p 3333:3333 rentalx)
+- Run docker container mapping local port in a docker virtual machine port
+
+docker stop <container>
+- Stop container execution
+
+docker exec -it <container_name> /bin/bash
+- Access the container
+
+docker rm <container>
+- Delete a container
+
+docker-compose up
+- Execute the build of the docker image and run the container
+
+docker-compose up -d
+- Run docker compose in background
+
+docker logs <container> -f
+- Follow logs of a container in real time
