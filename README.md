@@ -8,6 +8,6 @@ It was basically created with **NodeJS** and **Express**.
 ---
 
 ### Technologies: 
-[![Fastify](.markdown/fastify.png "Fastify")](https://fastify.dev/docs/latest/)
+[![Express](.markdown/express.png "Express")](https://expressjs.com/)
 [![Typescript](.markdown/typescript.png "Typescript")](https://www.typescriptlang.org/)
 [![NodeJS](.markdown/node.png "NodeJS")](https://nodejs.org/docs/latest/api/)
